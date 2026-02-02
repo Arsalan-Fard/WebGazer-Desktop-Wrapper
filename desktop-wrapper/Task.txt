@@ -1,0 +1,87 @@
+7->9 CUX + ask Soheil
+**fix drawing on canvas (with color separation)
+**see how to integrate it to map
+**White capturing
+**Read Knowledge graph paper
+**French
+
+
+23 Friday: CUX 2hr Proj-3hr
+24 Saturday: CUX 2hr Proj-3hr
+25 Sunday: CUX 2hr Proj-3hr
+26 Monday: Proj-2hr
+27 Tuesday: 30min:French
+28 Wednesday: MR
+29 Thursday: MR
+30 Friday:
+31 Saturday:
+01 Sunday:
+
+_____________________
+1Hr UX: read survey slides
+15min VH: add 3 screenshots of thumbs up
+
+
+
+
+
+
+
+
+
+
+
+What are some examples of what we can do by this setup that we couldn't with SSG
+- Publish/updates without rebuilding the site:
+- load posts from a separate repo/branch.
+
+What guides we used for Markdown implementation
+- https://github.github.com/gfm
+
+Creative ideas to make blog more related to the course theme  "Mixed reality"
+- Intro
+- Mouse movement (https://lusion.co/)
+- Header: Transition with powerglitch
+- Items scrolling (https://lusion.co/)
+- Content Showing
+
+
+
+
+
+
+
+VH: ?!
+
+Visualization: Writing / Video / Improve UI
+
+French: ?! 
+
+Project: (Paper SESSION: Crowdsourcing and Tech in the Wild) (Setup page + Visualizing inputs + 15min visualization)
+
+
+
+____________________________
+
+ACM ISS/ TEI / UbiComp / PerDis / CSCW /HCOMP
+____________________________
+2.5 physical
+2.5 2d
+2.5 3d
+5 Visualization
+
+2.5 French
+2.5 Virtual
+
+2.5 MR
+2.5 Quant
+
+2.5 Critical
+5 Image
+5 HCI
+
+
+
+
+
+

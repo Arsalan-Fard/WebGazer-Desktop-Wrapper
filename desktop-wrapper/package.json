@@ -1,0 +1,60 @@
+{
+  "name": "webgazer-desktop-wrapper",
+  "private": true,
+  "version": "0.1.0",
+  "main": "main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "build:click": "powershell -ExecutionPolicy Bypass -File scripts\\build-mouse-click-exe.ps1",
+    "predist": "node scripts\\ensure-mouse-click-exe.cjs",
+    "dist": "electron-builder --win portable"
+  },
+  "devDependencies": {
+    "electron": "^40.0.0",
+    "electron-builder": "^23.0.6"
+  },
+  "build": {
+    "appId": "com.webgazer.desktopwrapper",
+    "productName": "WebGazer Desktop Wrapper",
+    "asarUnpack": [
+      "static/**",
+      "models/**"
+    ],
+    "files": [
+      "package.json",
+      "main.cjs",
+      "preload.cjs",
+      "static/**",
+      "models/**",
+      "!recordings/**"
+    ],
+    "extraResources": [
+      {
+        "from": "../dist",
+        "to": "webgazer/dist"
+      },
+      {
+        "from": "../www",
+        "to": "webgazer/www"
+      },
+      {
+        "from": "../src",
+        "to": "webgazer/src"
+      },
+      {
+        "from": "bin/mouse_click.exe",
+        "to": "bin/mouse_click.exe"
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    }
+  }
+}

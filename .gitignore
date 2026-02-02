@@ -30,6 +30,11 @@
 dist/
 node_modules/
 www/node_modules/
+desktop-wrapper/dist/
+desktop-wrapper/build/
+desktop-wrapper/out/
+desktop-wrapper/bin/mouse_click.exe
+desktop-wrapper/bin/mouse_click/
 www/data/src/WebGazerETRA2018Dataset_Release20180420/
 www/data/src/P*/
 www/data/FramesDataset/

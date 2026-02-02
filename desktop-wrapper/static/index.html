@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' blob: data:; script-src 'self' 'unsafe-eval' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self' blob:; connect-src 'self' blob: https:;"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WebGazer Desktop Wrapper</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div id="hud" class="hud">
+      <div class="row hud-handle" id="hudHandle" title="Drag to move • Double-click to reset">
+        <strong>WebGazer Desktop Wrapper</strong>
+        <span id="status" class="status">Idle</span>
+      </div>
+      <div class="row">
+        <button id="btnStart">Start</button>
+        <button id="btnCalibrate">Calibrate</button>
+        <button id="btnRecord" class="btn-record">Record Screen</button>
+        <button id="btnExportHeatmap" disabled>Export Heatmap</button>
+        <button id="btnToggleClickThrough">Click-through: off</button>
+        <button id="btnToggleHud">Hide UI</button>
+      </div>
+      <div class="row camera-row">
+        <label class="checkbox">
+          <input id="useIpCamera" type="checkbox" />
+          Use IP camera (MJPEG)
+        </label>
+        <input
+          id="ipCameraUrl"
+          class="text-input"
+          type="url"
+          placeholder="http://10.99.104.35:8080/video"
+          autocomplete="off"
+          spellcheck="false"
+          inputmode="url"
+        />
+      </div>
+      <div class="row">
+        <label class="checkbox">
+          <input id="recordMicAudio" type="checkbox" checked />
+          Record microphone audio
+        </label>
+        <label class="checkbox">
+          <input id="recordSystemAudio" type="checkbox" />
+          Record system audio (if available)
+        </label>
+      </div>
+      <div class="row metrics">
+        <div class="metric">
+          <span class="label">Prediction</span>
+          <span id="predValue" class="value">--</span>
+        </div>
+        <div class="metric">
+          <span class="label">Samples</span>
+          <span id="sampleValue" class="value">0</span>
+        </div>
+        <div class="metric">
+          <span class="label">Clicks</span>
+          <span id="clickValue" class="value">0</span>
+        </div>
+        <div class="metric">
+          <span class="label">Face</span>
+          <span id="faceValue" class="value">--</span>
+        </div>
+        <div class="metric">
+          <span class="label">Video</span>
+          <span id="videoValue" class="value">--</span>
+        </div>
+        <div class="metric">
+          <span class="label">State</span>
+          <span id="predState" class="value">Idle</span>
+        </div>
+        <div class="metric">
+          <span class="label">Recording</span>
+          <span id="recordValue" class="value">Off</span>
+        </div>
+        <span id="predIndicator" class="indicator" aria-hidden="true"></span>
+        <span id="recordIndicator" class="indicator record" aria-hidden="true"></span>
+      </div>
+      <div class="row hint">
+        Shortcuts: <code>Ctrl+G</code> focus mode, <code>Ctrl+M</code> toggle URL mask, <code>Ctrl+Shift+M</code> edit URL mask, <code>Ctrl+Shift+R</code> record, <code>Ctrl+Shift+I</code> devtools, <code>Ctrl+Shift+1</code> quit
+      </div>
+    </div>
+
+    <div id="calibration" class="calibration hidden"></div>
+    <div id="gazeDot" class="gaze-dot hidden"></div>
+
+    <script src="/webgazer.js"></script>
+    <script src="/vendor/heatmap.min.js"></script>
+    <script src="/renderer.js"></script>
+  </body>
+  </html>
